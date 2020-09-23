@@ -23,16 +23,10 @@ h2 {
     padding: 0;
     margin: 0px 0 10px 0;
     color: #74dc38;
-    font-family: 'monstertext';
+    font-family: 'monsterdicer';
 }
 
 @font-face { 
   font-family: 'monsterdicer';
   src: url("../fonts/head.ttf") format('truetype'); 
 }
-
-@font-face { 
-  font-family: 'monstertext';
-  src: url("../fonts/body.ttf") format('truetype'); 
-}
-
