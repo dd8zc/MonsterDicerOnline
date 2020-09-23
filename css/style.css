@@ -17,6 +17,16 @@ h1 {
 }
 
 h2 {
+    text-shadow: 0 -3px 0 #999;
+    text-align: center;
+    font-size: 40px;
+    padding: 0;
+    margin: 40px 0 0px 0;
+    color: #74dc38;
+    font-family: 'monsterdicer';
+}
+
+h2 {
     text-shadow: 0 -2px 0 #999;
     text-align: center;
     font-size: 20px;
