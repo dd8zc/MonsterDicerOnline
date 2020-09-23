@@ -1,82 +1,83 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="icon" type="image/png" href="/img/MonsterDicer.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/img/MonsterDicer.png" sizes="96x96">
-	<script>
-		function changeImage(id)
-		{
-		document.getElementById(id).src = "./img/MonsterCrossedOut.png";
-		}
-		function onConfirm(buttonIndex) {
-		  clearAll = confirm('New Game?');  
-		  if (clearAll) {
-		    document.getElementById("Monster1").src = "./img/1.png";
-		    document.getElementById("Monster2").src = "./img/2.png";
-		    document.getElementById("Monster3").src = "./img/3.png";
-		    document.getElementById("Monster4").src = "./img/4.png";
-		    document.getElementById("Monster5").src = "./img/5.png";
-		    document.getElementById("Monster6").src = "./img/6.png";
-		    document.getElementById("Monster7").src = "./img/7.png";
-		    document.getElementById("Monster8").src = "./img/8.png";
-		    document.getElementById("Monster9").src = "./img/9.png";
-		    navigator.vibrate([75]);
-		  }
-		}
-	</script>
-	<style> 
-	table {
-	width: 100%;
-	}
-	</style>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="icon" type="image/png" href="/img/MonsterDicer.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/img/MonsterDicer.png" sizes="96x96">
+		<script>
+			function changeImage(id) {
+				document.getElementById(id).src = "./img/MonsterCrossedOut.png";
+			}
+			function onConfirm(buttonIndex) {
+				clearAll = confirm('New Game?');  
+				if (clearAll) {
+					document.getElementById("Monster1").src = "./img/1.png";
+					document.getElementById("Monster2").src = "./img/2.png";
+					document.getElementById("Monster3").src = "./img/3.png";
+					document.getElementById("Monster4").src = "./img/4.png";
+					document.getElementById("Monster5").src = "./img/5.png";
+					document.getElementById("Monster6").src = "./img/6.png";
+					document.getElementById("Monster7").src = "./img/7.png";
+					document.getElementById("Monster8").src = "./img/8.png";
+					document.getElementById("Monster9").src = "./img/9.png";
+					navigator.vibrate([75]);
+				}
+			}
+			</script>
+		<style> 
+			table {
+			width: "400"
+			}
+		</style>
+	</head>
 
-<body>
-  <center>
-    <h1>MonsterDicer</h1>
-    <h2>A  Monster  slicing  dice  game 17</h2>
-  </center>
-  <br>
-  <br>
-   <table>
-    <tr>
-      <th><img id="Monster1" onclick="changeImage('Monster1')" src="./img/1.png" width="110"></th>
-      <th><img id="Monster2" onclick="changeImage('Monster2')" src="./img/2.png" width="110"></th>
-      <th><img id="Monster3" onclick="changeImage('Monster3')" src="./img/3.png" width="110"></th>
-    </tr>
-    <tr>
-      <th><img id="Monster4" onclick="changeImage('Monster4')" src="./img/4.png" width="110"></th>
-      <th><img id="Monster5" onclick="changeImage('Monster5')" src="./img/5.png" width="110"></th>
-      <th><img id="Monster6" onclick="changeImage('Monster6')" src="./img/6.png" width="110"></th>
-    </tr>
-    <tr>
-      <th><img id="Monster7" onclick="changeImage('Monster7')" src="./img/7.png" width="110"></th>
-      <th><img id="Monster8" onclick="changeImage('Monster8')" src="./img/8.png" width="110"></th>
-      <th><img id="Monster9" onclick="changeImage('Monster9')" src="./img/9.png" width="110"></th>   
-    </tr>
-        <tr>
-      <th><br></th>
-      <th><br><br></th>
-      <th><br><br><br></th>   
-    </tr>
-	<tr>
-      <th></th>
-      <th></th>   	  
-      <th>
-		<p style="text-align: right" onclick="onConfirm(NewGame)">
-			<img id="NewGame"src="./img/new.svg" width="70">
-			<br>New Game!
-		</p>
-      </th>
-    </tr>
-  </table>
-
-	<p>Dies ist die WebUmsetzung von MonsterDicer, a monster slicing dice game. Idee und Umsetzung von Steffen Toepfl. Alle Rechte vorbehalten.</p>
-	<p>Mehr auf <a href="#" onclick="window.open('http://www.monsterdicer.com', '_system', 'location=yes');" >http://www.monsterdicer.com</a></p>
-	
-</body>
+	<body>
+		<center>
+			<h1>MonsterDicer</h1>
+			<h2>A  Monster  slicing  dice  game 17</h2>
+		</center>
+		<br>
+		<br>
+		<table align="center">
+			<tr>
+				<th><img id="Monster1" onclick="changeImage('Monster1')" src="./img/1.png" width="110"></th>
+				<th><img id="Monster2" onclick="changeImage('Monster2')" src="./img/2.png" width="110"></th>
+				<th><img id="Monster3" onclick="changeImage('Monster3')" src="./img/3.png" width="110"></th>
+			</tr>
+			<tr>
+				<th><img id="Monster4" onclick="changeImage('Monster4')" src="./img/4.png" width="110"></th>
+				<th><img id="Monster5" onclick="changeImage('Monster5')" src="./img/5.png" width="110"></th>
+				<th><img id="Monster6" onclick="changeImage('Monster6')" src="./img/6.png" width="110"></th>
+			</tr>
+			<tr>
+				<th><img id="Monster7" onclick="changeImage('Monster7')" src="./img/7.png" width="110"></th>
+				<th><img id="Monster8" onclick="changeImage('Monster8')" src="./img/8.png" width="110"></th>
+				<th><img id="Monster9" onclick="changeImage('Monster9')" src="./img/9.png" width="110"></th>   
+			</tr>
+			<tr>
+				<th><br></th>
+				<th><br><br></th>
+				<th><br><br><br></th>   
+			</tr>
+				<tr>
+				<th></th>
+				<th></th>     
+				<th>
+					<p style="text-align: right" onclick="onConfirm(NewGame)">
+						<img id="NewGame"src="./img/new.svg" width="70">
+						<br>New Game!
+					</p>
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<p>Dies ist die WebUmsetzung von MonsterDicer, a monster slicing dice game. Idee und Umsetzung von Steffen Toepfl. Alle Rechte vorbehalten.</p>
+					<p>Mehr auf <a href="#" onclick="window.open('http://www.monsterdicer.com', '_system', 'location=yes');">http://www.monsterdicer.com</a></p>
+				</th>
+			</tr>
+		</table>
+	</body>
 </html>
