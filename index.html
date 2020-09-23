@@ -35,7 +35,7 @@
 <body>
   <center>
     <h1>MonsterDicer</h1>
-    <h2>A  Monster  slicing  dice  game 4</h2>
+    <h2>A  Monster  slicing  dice  game 5</h2>
   </center>
   <br>
   <br>
@@ -55,12 +55,21 @@
       <th><img id="Monster8" onclick="changeImage('Monster8')" src="./img/8.png" width="110"></th>
       <th><img id="Monster9" onclick="changeImage('Monster9')" src="./img/9.png" width="110"></th>   
     </tr>
+        <tr>
+      <th><br></th>
+      <th><br><br></th>
+      <th><br><br><br></th>   
+    </tr>
+	<tr>
+      <th></th>
+      <th></th>   	  
+      <th>
+		<p style="text-align: right" onclick="onConfirm(NewGame)">
+			<img id="NewGame"src="./img/new.svg" width="70">
+			<br>Repeat!
+		</p>
+      </th>
+    </tr>
   </table>
-
-    <p style="text-align: right" onclick="onConfirm(NewGame)">
-        <img id="NewGame"src="./img/new.svg" width="70">
-        <br>Repeat!
-    </p>
-    
 </body>
 </html>
