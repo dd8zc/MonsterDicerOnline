@@ -26,6 +26,10 @@
 					navigator.vibrate([75]);
 				}
 			}
+			window.onload = (event) => {
+				var noSleep = new NoSleep();
+				noSleep.enable();
+			};
 		</script>
 	</head>
 
@@ -38,19 +42,19 @@
 		<br>
 		<table align="center" width=350>
 			<tr>
-				<td align="center"><img id="Monster1" onclick="changeImage('Monster1')" src="./img/1.png" width="110"></th>
-				<td align="center"><img id="Monster2" onclick="changeImage('Monster2')" src="./img/2.png" width="110"></th>
-				<td align="center"><img id="Monster3" onclick="changeImage('Monster3')" src="./img/3.png" width="110"></th>
+				<td align="center"><img id="Monster1" onclick="changeImage('Monster1')" src="./img/1.png" width="110"></td>
+				<td align="center"><img id="Monster2" onclick="changeImage('Monster2')" src="./img/2.png" width="110"></td>
+				<td align="center"><img id="Monster3" onclick="changeImage('Monster3')" src="./img/3.png" width="110"></td>
 			</tr>
 			<tr>
-				<td align="center"><img id="Monster4" onclick="changeImage('Monster4')" src="./img/4.png" width="110"></th>
-				<td align="center"><img id="Monster5" onclick="changeImage('Monster5')" src="./img/5.png" width="110"></th>
-				<td align="center"><img id="Monster6" onclick="changeImage('Monster6')" src="./img/6.png" width="110"></th>
+				<td align="center"><img id="Monster4" onclick="changeImage('Monster4')" src="./img/4.png" width="110"></td>
+				<td align="center"><img id="Monster5" onclick="changeImage('Monster5')" src="./img/5.png" width="110"></td>
+				<td align="center"><img id="Monster6" onclick="changeImage('Monster6')" src="./img/6.png" width="110"></td>
 			</tr>
 			<tr>
-				<td align="center"><img id="Monster7" onclick="changeImage('Monster7')" src="./img/7.png" width="110"></th>
-				<td align="center"><img id="Monster8" onclick="changeImage('Monster8')" src="./img/8.png" width="110"></th>
-				<td align="center"><img id="Monster9" onclick="changeImage('Monster9')" src="./img/9.png" width="110"></th>   
+				<td align="center"><img id="Monster7" onclick="changeImage('Monster7')" src="./img/7.png" width="110"></td>
+				<td align="center"><img id="Monster8" onclick="changeImage('Monster8')" src="./img/8.png" width="110"></td>
+				<td align="center"><img id="Monster9" onclick="changeImage('Monster9')" src="./img/9.png" width="110"></td>   
 			</tr>
 			<tr>
 				<td align="center"><br></th>
@@ -58,14 +62,14 @@
 				<td align="center"><br></th>   
 			</tr>
 			<tr>
-				<td align="center"></th>
-				<td align="center"></th>     
+				<td align="center"></td>
+				<td align="center"></td>     
 				<td align="center">
 					<p style="text-align: right" onclick="onConfirm(NewGame)">
 						<img id="NewGame"src="./img/new.svg" width="70">
 						<br>New Game!
 					</p>
-				</th>
+				</td>
 			</tr>
 			<tr>
 			</tr>
