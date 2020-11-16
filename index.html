@@ -3,74 +3,82 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+		<link rel="stylesheet" href="components/loader.css">
 		<link rel="stylesheet" href="css/style.css">
-		<link rel="shortcut icon" href="/favicon.ico">
+		<script src="components/loader.js"></script>
 		<script src="js/NoSleep.js"></script>
-		<link rel="icon" type="image/png" href="./img/MonsterDicer.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="./img/MonsterDicer.png" sizes="96x96">
 		<script>
-			function changeImage(id) {
-				document.getElementById(id).src = "./img/MonsterCrossedOut.png";
+			var clicks = 0;
+			function monsterCatched(id)
+			{
+			if (document.getElementById(id).getAttribute('src') != "./img/MonsterCrossedOut.png") {
+			document.getElementById(id).src = "./img/MonsterCrossedOut.png";
+			clicks += 1;
+			}      
+			if (clicks >= 9) {
+			navigator.vibrate([60,60,180]);
+			wonAndNewGame = confirm('Herzlichen Glückwunsch, Du hast gewonnen!\nNoch eine Runde?');
+			if (wonAndNewGame) {
+			startNewGame();
 			}
-			function onConfirm(buttonIndex) {
-				clearAll = confirm('New Game?');  
-				if (clearAll) {
-					document.getElementById("Monster1").src = "./img/1.png";
-					document.getElementById("Monster2").src = "./img/2.png";
-					document.getElementById("Monster3").src = "./img/3.png";
-					document.getElementById("Monster4").src = "./img/4.png";
-					document.getElementById("Monster5").src = "./img/5.png";
-					document.getElementById("Monster6").src = "./img/6.png";
-					document.getElementById("Monster7").src = "./img/7.png";
-					document.getElementById("Monster8").src = "./img/8.png";
-					document.getElementById("Monster9").src = "./img/9.png";
-					navigator.vibrate([75]);
-				}
 			}
+			}
+
+			function startNewGame() {
+			clicks = 0;
+			for (var i = 1; i < 11; i++) {
+			document.getElementById("Monster" + i).src = "./img/" + i + ".png";
+			}
+			}
+
+			function newGameOnConfirm() {
+			resetGame = confirm('Neues Spiel?');  
+			if (resetGame) {
+			startNewGame();
+			}
+			}
+
 			window.onload = (event) => {
-				var noSleep = new NoSleep();
-				noSleep.enable();
+			var noSleep = new NoSleep();
+			noSleep.enable();
 			};
 		</script>
 	</head>
 
 	<body>
 		<center>
-			<h1>MonsterDicer</h1>
-			<h2>A  Monster  slicing  dice  game</h2>
+			<h1_logo>MonsterDicer</h1_logo>
+			<br>
+			<h2_logo>A  Monster  slicing  dice  game</h2_logo>
 		</center>
 		<br>
-		<table align="center" width=350>
+		<br>
+		<table align="center">
 			<tr>
-				<td align="center"><img id="Monster1" onclick="changeImage('Monster1')" src="./img/1.png" width="110"></td>
-				<td align="center"><img id="Monster2" onclick="changeImage('Monster2')" src="./img/2.png" width="110"></td>
-				<td align="center"><img id="Monster3" onclick="changeImage('Monster3')" src="./img/3.png" width="110"></td>
+				<td align="center"><img class="rotatingMonster" id="Monster1" onclick="monsterCatched('Monster1')" src="./img/1.png" width="110"></td>
+				<td align="center"><img class="rotatingMonster" id="Monster2" onclick="monsterCatched('Monster2')" src="./img/2.png" width="110"></td>
+				<td align="center"><img class="rotatingMonster" id="Monster3" onclick="monsterCatched('Monster3')" src="./img/3.png" width="110"></td>
 			</tr>
 			<tr>
-				<td align="center"><img id="Monster4" onclick="changeImage('Monster4')" src="./img/4.png" width="110"></td>
-				<td align="center"><img id="Monster5" onclick="changeImage('Monster5')" src="./img/5.png" width="110"></td>
-				<td align="center"><img id="Monster6" onclick="changeImage('Monster6')" src="./img/6.png" width="110"></td>
+				<td align="center"><img class="rotatingMonster" id="Monster4" onclick="monsterCatched('Monster4')" src="./img/4.png" width="110"></td>
+				<td align="center"><img class="rotatingMonster" id="Monster5" onclick="monsterCatched('Monster5')" src="./img/5.png" width="110"></td>
+				<td align="center"><img class="rotatingMonster" id="Monster6" onclick="monsterCatched('Monster6')" src="./img/6.png" width="110"></td>
 			</tr>
 			<tr>
-				<td align="center"><img id="Monster7" onclick="changeImage('Monster7')" src="./img/7.png" width="110"></td>
-				<td align="center"><img id="Monster8" onclick="changeImage('Monster8')" src="./img/8.png" width="110"></td>
-				<td align="center"><img id="Monster9" onclick="changeImage('Monster9')" src="./img/9.png" width="110"></td>   
-			</tr>
-			<tr>
-				<td align="center">
-
-				</td>
-				<td align="center"></td>     
-				<td align="center">
-					<p style="text-align: right" onclick="onConfirm(NewGame)">
-						<img id="NewGame"src="./img/new.svg" width="70">
-						<br>New Game!
-					</p>
-				</td>
-			</tr>
-			<tr>
+				<td align="center"><img class="rotatingMonster" id="Monster7" onclick="monsterCatched('Monster7')" src="./img/7.png" width="110"></td>
+				<td align="center"><img class="rotatingMonster" id="Monster8" onclick="monsterCatched('Monster8')" src="./img/8.png" width="110"></td>
+				<td align="center"><img class="rotatingMonster" id="Monster9" onclick="monsterCatched('Monster9')" src="./img/9.png" width="110"></td>
 			</tr>
 		</table>
+		<br>
+		<table width=100%>
+			<tr>
+				<td align="right"><a href><p onclick="newGameOnConfirm()"><img id="NewGame" src="./img/nochmal.png" width="55"><br>Nochmal!</p></a></td>
+			</tr>
+		</table>
+		<br>
+		<br>
 		<p align = "center">
 			Dies ist die Webumsetzung der Companion App zu MonsterDicer, a monster slicing dice game. Mehr auf 
 			<a href="#" onclick="window.open('http://www.monsterdicer.com', '_system', 'location=yes');">http://www.monsterdicer.com</a>
