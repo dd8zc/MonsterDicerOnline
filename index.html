@@ -12,36 +12,36 @@
 			var clicks = 0;
 			function monsterCatched(id)
 			{
-			if (document.getElementById(id).getAttribute('src') != "./img/MonsterCrossedOut.png") {
-			document.getElementById(id).src = "./img/MonsterCrossedOut.png";
-			clicks += 1;
-			}      
-			if (clicks >= 9) {
-			navigator.vibrate([60,60,180]);
-			wonAndNewGame = confirm('Herzlichen Glückwunsch, Du hast gewonnen!\nNoch eine Runde?');
-			if (wonAndNewGame) {
-			startNewGame();
-			}
-			}
+				if (document.getElementById(id).getAttribute('src') != "./img/MonsterCrossedOut.png") {
+					document.getElementById(id).src = "./img/MonsterCrossedOut.png";
+					clicks += 1;
+				}      
+				if (clicks >= 9) {
+					navigator.vibrate([60,60,180]);
+					wonAndNewGame = confirm('Herzlichen Glückwunsch, Du hast gewonnen!\nNoch eine Runde?');
+					if (wonAndNewGame) {
+						startNewGame();
+					}
+				}
 			}
 
 			function startNewGame() {
-			clicks = 0;
-			for (var i = 1; i < 11; i++) {
-			document.getElementById("Monster" + i).src = "./img/" + i + ".png";
-			}
+				clicks = 0;
+				for (var i = 1; i < 11; i++) {
+					document.getElementById("Monster" + i).src = "./img/" + i + ".png";
+				}
 			}
 
 			function newGameOnConfirm() {
-			resetGame = confirm('Neues Spiel?');  
-			if (resetGame) {
-			startNewGame();
-			}
+				resetGame = confirm('Neues Spiel?');  
+				if (resetGame) {
+					startNewGame();
+				}
 			}
 
 			window.onload = (event) => {
-			var noSleep = new NoSleep();
-			noSleep.enable();
+				var noSleep = new NoSleep();
+				noSleep.enable();
 			};
 		</script>
 	</head>
@@ -49,10 +49,8 @@
 	<body>
 		<center>
 			<h1>MonsterDicer</h1>
-			<br>
 			<h2>A  Monster  slicing  dice  game</h2>
 		</center>
-		<br>
 		<br>
 		<table align="center">
 			<tr>

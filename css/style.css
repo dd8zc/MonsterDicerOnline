@@ -39,7 +39,7 @@ h2 {
 }
 
 .rotatingMonster {
-  transition: transform 0.8s;
+  transition: transform 0.7s;
   transform-style: preserve-3d;  
   /*perspective: 110px;
   width: 110px;
