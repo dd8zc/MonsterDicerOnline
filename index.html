@@ -41,6 +41,18 @@
 				startNewGame();
 			}
 
+			function toggleDarkness() {
+				var element = document.body;
+				element.classList.toggle("dark-mode");
+				if (document.getElementById('toggleDarknessOption').getAttribute('src') == "./img/darkmode_black.png") {
+					document.getElementById('toggleDarknessOption').src = "./img/darkmode_white.png";
+					document.getElementById('NewGame').src = "./img/nochmal_white.png";
+				}  else {
+					document.getElementById('toggleDarknessOption').src = "./img/darkmode_black.png";
+					document.getElementById('NewGame').src = "./img/nochmal_black.png";
+				}
+			}
+			
 			window.onload = (event) => {
 				var noSleep = new NoSleep();
 				noSleep.enable();
@@ -76,9 +88,9 @@
 				<td align="center"></td>
 			</tr>
 			<tr>
+				<td align="center"><p onclick="toggleDarkness()"><img id="toggleDarknessOption" src="./img/nochmal_black.png" width="55"><br>Dark Mode</p></td>
 				<td align="center"></td>
-				<td align="center"></td>
-				<td align="right"><p onclick="newGameOnConfirm()"><img id="NewGame" src="./img/nochmal.png" width="55"><br>Nochmal!</p></td>
+				<td align="right"><p onclick="newGameOnConfirm()"><img id="NewGame" src="./img/nochmal_black.png" width="55"><br>Nochmal!</p></td>
 			</tr>
 		</table>
 		<br>
