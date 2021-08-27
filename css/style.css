@@ -51,3 +51,8 @@ h2 {
   -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
